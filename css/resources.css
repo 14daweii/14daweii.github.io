@@ -1,0 +1,52 @@
+/* General */
+.res-section {
+	margin: 20px;
+	padding: 0px;
+}
+.res-title {margin-bottom: 20px;}
+.res-list {
+	margin: 50px 0px 50px 0px;
+	padding: 0px;
+	list-style: none;
+}
+.res-item {
+	color: #e6e6e6;
+	margin: 15px 0px 0px 15px;
+}
+.res-item a {
+	color: #333333;
+	text-decoration: none;
+	text-shadow: 0px 0px 2px #cccccc;
+	transition: 0.33s;
+}
+.res-item a:hover {
+	color: #8bc751;
+	text-shadow: 0px 0px 2px #d1e39b;
+}
+
+
+/* Page Color: Green */
+.header1 {color:#8bc751;}
+.header2 {color:#8bc751;}
+
+
+/* Tab Buttons */
+div.tabs button:hover {
+	background: #8bc751;
+	box-shadow: 0px 0px 10px #d1e39b;
+}
+div.tabs button.active {background: #8bc751;}
+
+
+/* Tab Space */
+.tier1 li a:hover, .tier2 li a:hover {
+	color: #8bc751; 
+	border-bottom: 1px dashed #8bc751;
+}
+
+
+/* Paragraphs */
+.tier1 li a:hover, .tier2 li a:hover {
+	color: #8bc751;
+	border-bottom: 1px dashed #8bc751;
+}

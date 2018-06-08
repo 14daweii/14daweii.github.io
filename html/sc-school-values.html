@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>School Values</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.tabSpace {display: inline-block; vertical-align: top; margin: 0px 0px 0px 25px;}
+		.tabSubsection {padding: 15px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">School Values</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">About</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">Edit</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')">Labels</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB4')">Category</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB5')">Search</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB6')">School Constants</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">General Information</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>To turn on School Values: Super Admin > District Options > Use School Values</li>
+						<li>To edit the content: Admin > School Values</li>
+						<li>To customize the labels: School Constants > School Values</li>
+						<li>To make it School Values a mapping category: Admin > All Mapping Categories
+							<ul class="tier2 paragraph1">
+								<li>Like the "catch-all" Standards and Assessment, there should be only ONE School Values Catgory in ONE Atlas system.</li>
+								<li>Until you make School Values a mapping category and place it on the template, School Values always shows as a tab on this template.</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Edit School Values</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<img src="../images/school-values-1.png" width="400px">
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ol class="tier1 paragraph1">
+						<li>To edit Activity drop-down list: Admin > School Values > Activities</li>
+						<li>To edit School Values drop-down list: Admin > School Values > Core School Value Types and School Values</li>
+					</ol><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->			
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Rename Labels</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<img src="../images/school-values-2.png" width="400px">
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ol class="tier1 paragraph1">
+						<li>To Rename "Actvity": School Constants > School Values > sOpportunityLabel + sOpportunitiesLabel</li>
+						<li>To Rename "Description": School Constants > School Values > sSchoolValueAssessmentDescriptionLabel</li>
+						<li>To Rename "School Values": School Constants > School Values > sSchoolValue + sSchoolValues</li>
+					</ol><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->			
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB4" class="tabContent">
+			<div class="tabName header2">School Values Category</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">3 Options in All Mapping Categories</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<img src="../images/school-values-3.png" width="600px">
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">3 Options on Template</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<img src="../images/school-values-4.png" width="300px">
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->			
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB5" class="tabContent">
+			<div class="tabName header2">Search Options</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<img src="../images/school-values-5.png" width="600px">
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ol class="tier1 paragraph1">
+						<li>TRUE: School Constants > School Values > bMultiLevelSchoolValuesSearchByType</li>
+						<li>FALSE: School Constants > School Values > bMultiLevelSchoolValuesSearchByType</li>
+					</ol><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->			
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB6" class="tabContent">
+			<div class="tabName header2">School Constants for School Values</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace" style="display: block;">
+				<iframe class="airtable-embed" src="https://airtable.com/embed/shruCCJlVnKp9LLFW?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel=""></iframe>
+			</div><!-- <div class="tabSpace"> -->			
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Basic Template Editing</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.tabSubsection {border: none; padding: 0px;}
+		.tabSubheader {color: #f79433; font-size: 1.125em;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Basic Template Editing</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Embed Links</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2"></div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+
+				<div class="tabSubheader header4">Embed An External Webpage</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+					<textarea id="script201" rows="2">
+<a href="the-url" target="_blank">Display Name</a>
+ 					</textarea>
+					<button class="copy-button" id="copy201"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+					<script>
+						var script201 = document.getElementById("script201"); 
+						var button = document.getElementById("copy201"); button.addEventListener("click", function (event) {event.preventDefault(); script201.select(); document.execCommand("copy");});
+					</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+
+				<div class="tabSubheader header4">Embed A PDF Document - Save the document to Webnas first</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+					<textarea id="script202" rows="2">
+<a href="the-atlas-url/links/DocumentName.pdf" target="_blank">Display Name</a>
+ 					</textarea>
+					<button class="copy-button" id="copy202"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+					<script>
+						var script202 = document.getElementById("script202"); 
+						var button = document.getElementById("copy202"); button.addEventListener("click", function (event) {event.preventDefault(); script202.select(); document.execCommand("copy");});
+					</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+
+				<div class="tabSubheader header4">Embed A Non-PDF Document - Save the document to Webnas first</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+					<textarea id="script203" rows="2">
+<a href="the-atlas-url/links/DocumentName.DocumentExtention">Display Name</a>
+ 					</textarea>
+					<button class="copy-button" id="copy203"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+					<script>
+						var script203 = document.getElementById("script203"); 
+						var button = document.getElementById("copy203"); button.addEventListener("click", function (event) {event.preventDefault(); script203.select(); document.execCommand("copy");});
+					</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

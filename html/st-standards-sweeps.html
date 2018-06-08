@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Standards Sweeps</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		li {display: inline-block; padding: 0px 10px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Standards Sweeps</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Monitoring</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">State Standards Monitoring</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<a class="hyperlink" href="https://docs.google.com/document/d/1MYVCelOg8StSZOdrzVn1IUhKSpFgKayg2KARJOwjl3Y/edit" target="_blank"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Processes</a>
+				<a class="hyperlink" href="https://airtable.com/tblOTEoLWRzebB0cN/viwPHbZ1NakhKkALm" target="_blank"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Airtable</a>
+				<a class="hyperlink" href="https://fs.rubicon.com/internal/FlightSchool/RubiconChannel" target="_blank"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i>Rubicon Channel Messages</a>
+				<div class="tabSubheader header4">Checklist</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li><a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Checklists\Step 1 Context Gathering.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Step 1: Context Gathering</a></li> |
+						<li><a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Checklists\Step 2 Loading and Updating.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Step 2: Loading and Updating</a></li> |
+						<li><a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Checklists\Checklist for first time monitoring.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Checklist for First Time Monitoring</a></li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Templates</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+								<li>
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\FS Journal Entry Template.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>FS Journal Entry</a>&nbsp;&nbsp;
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Exemplars\FS Journal Entry Exemplar.docx">Exemplar</a>
+								</li> |
+								<li>
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Snapshot Template.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Snapshot</a>&nbsp;&nbsp;
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Exemplars\Snapshot Examplar.docx">Exemplar</a>
+								</li> |
+								<li>
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Email Template.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Email</a>&nbsp;&nbsp;
+									<a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Exemplars\Email Exemplar.docx">Exemplar</a>
+								</li> |
+								<li><a href="M:\Atlas\005 Standards\STATE STANDARDS\zzzMonitoring Resources\Templates\Deployment Rubicon Channel Standards Template.docx"><i class="fa fa-cloud-download" aria-hidden="true"></i>Deployment Rubicon Channel Standards</a></li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site Build Management</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		span.highlight {padding: 3px; background-color: #fecf8d;}
+		span.circle {color: #999999; padding: 3px; border: 1px solid #999999; border-radius: 5px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Site Build Management</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Add Client</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">Create URL</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')">Select Database</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB4')">Choose Look/Feel</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB5')">QA and Such</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Add Client</div>
+			<div class="tabSpace">
+				<ul class="tier1 paragraph1">
+					<li>Go to <a href="https://fs.rubicon.com/i/adminsite/default.php" target="_blank">Flight School</a>, hover on <span class="highlight">Clients</span> on the top left corner of the page, and then click <span class="highlight">Add Client</span>.</li>
+					<li>Fill out the page based on the information on FS
+						<ul class="tier2 paragraph1">
+							<li>Client Name (Internal): Same as the school name on FS + <span class="circle">,</span> <span class="circle">Space</span> + State Abbreviation (e.g. Hogwarts School, OR) or <span class="circle">*</span> + the two letter Country Abbreviation" (Hogwarts School, *GB)</li>
+							<li>Display Name (Site): Same as the school name that will display on the Atlas site (e.g. Hogwarts School)</li>
+							<li>Exemplar License: Check it only for clients (not for evaluative prototypes, internal sites, or other cases)</li>
+							<li>Display Public Site in Communities: Do NOT check it. This is for making the public site link available to all Atlas users.</li>
+							<li>State/Country (Internal) / Location: Based on the information on FS</li>
+							<li>Version: 8.2</li>
+							<li>Production URL: Based on the school website url and NO special charactors other than <span class="circle">-</span> (but try NOT to use more than one), letters and digits only!</li>
+							<li>Rubicon lead: Based on the information on <span class="highlight">Flight School</span></li>
+							<li>Leave everything else blank, save it, and then you will see the <span class="highlight">Flight School</span> option. Attach FS to this page, and then save the page again.</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Create URL</div>
+			<div class="tabSpace">
+				<ul class="tier1 paragraph1">
+					<li>Copy the highlighted part of the URL: https://<span class="highlight">hogwarts</span>.rubiconatlas.org</li>
+					<li>Connect to <span class="highlight">Web1</span> (remote Desktop) and log in.</li>
+					<li>Go to <span class="highlight">Window Start</span> and RIGHT CLICK the <span class="highlight">Command Prompt</span> and CLICK <span class="highlight">Run as Administrator</span>.
+					<li>Create URL:
+						<ul class="tier2 paragraph1">
+							<li>New URLs: newsite<span class="circle">Space</span>URL, and then <span class="circle">Enter</span></li>
+							<li>Delete URLs: deletesite<span class="circle">Space</span>URL, and then <span class="circle">Enter</span></li>
+							<li>Rename URLs: renamesite<span class="circle">Space</span>old URL<span class="circle">Space</span>newURL, and then <span class="circle">Enter</span></li>
+							<li>Public Site URLs: addpublic<span class="circle">Space</span>root URL, and then <span class="circle">Enter</span></li>
+							<li>New .NET URLs (e.g. for Test Drives): newsite.NET.bat<span class="circle">Space</span>URL, and then <span class="circle">Enter</span></li>
+						</ul><!-- <ul class="tier2 paragraph1"> -->
+					</li>
+				</ul><!-- <ul class="tier1 paragraph1"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Select Database</div>
+			<div class="tabSpace">
+				<ul class="tier1 paragraph1">
+					<li>Basic Consideration: Content in SET, Demo Data or Module Curriculum, Categories and Templates, Schools under same organizations/associations, etc</li>
+					<li>Commonly Used Shell Systems:
+						<ul class="tier2 paragraph1">
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=3407&" target="_blank">UbD Basic</a> - for most of the UbD sites</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5482&" target="_blank">NYC Reboot</a> - for NYC sites and NYC quick site builds</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5616&" target="_blank">OS/MAISA</a> - for schools need OS/MAISA curriculum modules</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5170&" target="_blank">Engage NY</a> - for schools need EngageNY curriculum modules</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4073&" target="_blank">AU/Roos</a> - for schools in Australia</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5123&" target="_blank">IB Resources</a> - for IB schools</li>
+							<li class="hyper"><a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4753&" target="_blank">JL Reboot</a> - for Joseph's schools</li>
+						</ul><!-- <ul class="tier2 paragraph1"> -->
+					</li>
+					<li>Process:
+						<ul class="tier2 paragraph1">
+							<li>Go to the "little man" page of the shell system, and then click the "Restore" button.</li>
+							<li>Give a name for the database you are creating (see name convention below). DO NOT use charactors other than letters and digits or you are fired!</li>
+							<li>Database Name Convention: <span class="highlight">Atlas+URL</span> (e.g. the database name for hogwarts.rubiconatlas.org is <span class="highlight">AtlasHogwarts</span> (case sensitive)).</li>
+							<li>Copy the <span class="highlight">Sever Name</span> and <span class="highlight">Database Name</span> and pasted them into the new site's <span class="highlight">School Constants</span> > <span class="highlight">Database/Development</span> > <span class="highlight">SQL_DATA_SOURCE</span> and <span class="highlight">SQL_INITIAL_CATALOG</span> respectively, and then save.</li>
+						</ul><!-- <ul class="tier2 paragraph1"> -->
+					</li>
+				</ul><!-- <ul class="tier1 paragraph1"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB4" class="tabContent">
+			<div class="tabName header2">Choose Look/Feel</div>
+			<div class="tabSpace">
+					<ul class="tier1 paragraph1">
+						<li>Look and Feel
+							<ul class="tier2 paragraph1">
+								<li class="hyper"><a href="M:\Letters\David Li\01 The Deployment Book\003 Site Build\Color Scheme Preview.pdf" target="_blank">Color Scheme Preview</a></li>
+								<li class="hyper"><a href="M:\Letters\David Li\01 The Deployment Book\003 Site Build\Look and Feel.pdf" target="_blank">Logo Requirements</a></li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Site Name in Atlas: Update the site name in <span class="highlight">Super Admin</span> > <span class="highlight">District Options</span>, to avoid confusions for site build crew.</li>
+						<li>Record the Database source (shell system) and Color Scheme in JIRA tasks as Labels.</li>
+						<li>Ready to delegate the site build task.</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB5" class="tabContent">
+			<div class="tabName header2">QA and Such</div>
+			<div class="tabSpace">
+					<ul class="tier1 paragraph1">
+						<li class="hyper"><a href="M:\Letters\David Li\01 The Deployment Book\003 Site Build\Look and Feel.pdf" target="_blank">Site Build / QA Cheat Sheet</a></li>
+						<li>Queries to Run in ADP:
+							<ul class="tier2 paragraph1">
+								<li>Empty Word Cloud - EXEC dbo.PrototypesEmptyWordCloudAddDefaults_SP</li>
+								<li>Clear Communication Commons - EXEC Deployment.PrototypesDeleteAllCommunicationsCommonsData_SP 'booyah'</li>
+								<li>Rebuild Indexes - EXEC dbo.RebuildIndexesUpdateStatistics_SP</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Finally,
+							<ul class="tier2 paragraph1">
+								<li>Super Admin > Delete Standards Alignment Orphans</li>
+								<li>Super Admin > Reload All XML</li>
+								<li>On the little man page, change the <span class="highlight">Status</span> to "<span class="highlight">Live</span>".</li>
+								<li>Ready to email Rocketeer!</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

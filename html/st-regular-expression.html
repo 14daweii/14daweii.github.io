@@ -1,0 +1,131 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Regular Expression</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.tabSpace {display: inline-block; vertical-align: top; margin: 0px 0px 0px 25px;}
+		.tabSubheader {margin-top: 0px;}
+		.tabSubsection {padding: 15px;}
+		td.regex-name {padding-right: 10px; color: #f79433; font-size: 0.875em; text-align: right;}
+		td.regex {min-width: 150px; border: 1px solid #e6e6e6; border-radius: 5px; padding: 4px 8px; color: #666666; font-size: 0.875em; }
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Regular Expression</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Cheat Sheet</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">Helpful Expressions</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Cheat Sheet</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Regular Expression Anchors | Characters | Quantifiers</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Start of Line</td><td class="regex">^</td></tr>
+					<tr><td class="regex-name">White Space</td><td class="regex">\s</td></tr>
+					<tr><td class="regex-name">Not White Space</td><td class="regex">\S</td></tr>
+					<tr><td class="regex-name">Digit</td><td class="regex">\d</td></tr>
+					<tr><td class="regex-name">Not Digit</td><td class="regex">\D</td></tr>
+					<tr><td class="regex-name">Word</td><td class="regex">\w</td></tr>
+					<tr><td class="regex-name">Not Word</td><td class="regex">\W</td></tr>
+					<tr><td class="regex-name">Anything but New Line (Wildcard)</td><td class="regex">.</td></tr>
+					<tr><td class="regex-name">New Line</td><td class="regex">\n</td></tr>
+					<tr><td class="regex-name">Carriage Return</td><td class="regex">\r</td></tr>
+					<tr><td class="regex-name">Tab</td><td class="regex">\t</td></tr>
+					<tr><td class="regex-name">Vertical Tab</td><td class="regex">\v</td></tr>
+					<tr><td class="regex-name">Zero or More of the Preceding</td><td class="regex">*</td></tr>
+					<tr><td class="regex-name">One or More of the Preceding</td><td class="regex">+</td></tr>
+					<tr><td class="regex-name">Zero or One of the Preceding</td><td class="regex">?</td></tr>
+					<tr><td class="regex-name">Exactly Three of the Preceding</td><td class="regex">{3}</td></tr>
+					<tr><td class="regex-name">Three or More of the Preceding</td><td class="regex">{3,}</td></tr>
+					<tr><td class="regex-name">Three, Four, or Five of the Preceding</td><td class="regex">{3,5}</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Groups and Ranges | Escape Sequences | String Replacement</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Lowercase Letter from a to q</td><td class="regex">[a-q]</td></tr>
+					<tr><td class="regex-name">Uppercase Letter from A to Q</td><td class="regex">[A-Q]</td></tr>
+					<tr><td class="regex-name">Uppercase or Lowercase from A to Q</td><td class="regex">[A-Qa-q]</td></tr>
+					<tr><td class="regex-name">Digit from 0-7</td><td class="regex">[0-7]</td></tr>
+					<tr><td class="regex-name">Or</td><td class="regex">|</td></tr>
+					<tr><td class="regex-name">Group</td><td class="regex">(expressions)</td></tr>
+					<tr><td class="regex-name">Non-capturing Group</td><td class="regex">(?:expressions)</td></tr>
+					<tr><td class="regex-name">Range (a or b or c)</td><td class="regex">[abc]</td></tr>
+					<tr><td class="regex-name">Range (not a or b or c)</td><td class="regex">[^abc]</td></tr>
+					<tr><td class="regex-name">Don't Treat the Following Character as RegEx</td><td class="regex">\</td></tr>
+					<tr><td class="regex-name">Begin Literal Sequence</td><td class="regex">\Q</td></tr>
+					<tr><td class="regex-name">End Literal Sequence</td><td class="regex">\E</td></tr>
+					<tr><td class="regex-name">Replace Using the n<sup>th</sup> Set of Parenthesi</td><td class="regex">$n</td></tr>
+					<tr><td class="regex-name">Use "xyz" in ^(xyz)(abc)</td><td class="regex">$1</td></tr>
+					<tr><td class="regex-name">Use "xyz” in ^(abc)(xyz)</td><td class="regex">$2</td></tr>
+					<tr><td class="regex-name">Use the Entire Matched String</td><td class="regex">$&</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Helpful Expressions</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Remove Carriage (Hard) Returns</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Find What</td><td class="regex">\n([a-zàèìòùáéíóúýâêîôûãñõäëïöüy]{2})|\n(\s[a-zàèìòùáéíóúýâêîôûãñõäëïöüy]{2})|\n(\()|\n([0-9] )</td></tr>
+					<tr><td class="regex-name">Replace With</td><td class="regex">$1$2$3$4</td></tr>
+					<tr><td class="regex-name">Note</td><td class="regex">Remember the space before the first $. This will probably work for 80 to 90 percent of the returns you encounter but can be manipulated to cover the rest – make sure to look over your document to make it worked).</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Remove All Blank Lines (Contain Only Spaces or Nothing)</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Find What</td><td class="regex">^(\n*|\s+)\n</td></tr>
+					<tr><td class="regex-name">Note</td><td class="regex">Replace with nothing.</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Find Any Line That Doesn’t Start with A Latitude Indicator</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Find What</td><td class="regex">^(\w|\(|\.|,|\?|\:|\;|\"|')</td></tr>
+					<tr><td class="regex-name">Note</td><td class="regex">This will work for 99% of checks, but might not work if a line begins with a strange symbol is in a different language.</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Delete Any Unnecessary Spaces at the End of A Line</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<table cellspacing="6px">
+					<tr><td class="regex-name">Find What</td><td class="regex">(\w|\.)( |\t)+\n</td></tr>
+					<tr><td class="regex-name">Replace With</td><td class="regex">$1\n</td></tr>
+					</table>
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

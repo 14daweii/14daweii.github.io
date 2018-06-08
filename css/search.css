@@ -1,0 +1,83 @@
+/* Search Container */
+.search-container {
+	margin: auto;
+	display: inline-flex;
+}
+
+
+/* Search Shotcuts */
+.shortcut {
+	width: 35px;
+	height: 35px;
+	margin: 0px 10px 0px 10px;
+}
+.shortcut-text {
+	font-family: Ubuntu;
+	font-size: 1em;
+	font-weight: bold;
+}
+.searchShortcuts button {
+	background: transparent;
+	outline: none;
+	border: none;
+	color: #333333;
+	font-size: 1em;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.searchShortcuts button:hover, .shortcut a:hover {
+	color: #f79433;
+	text-shadow: 0px 0px 10px #fecf8d;
+}
+
+
+/* Search Boxes */
+.clientSearch, .standardsSearch {
+	border: 1px solid #cccccc;
+	border-radius: 5px;
+	margin-left: 20px;
+	padding: 1px;
+	transition: 0.25s;
+}
+.clientSearch:hover, .standardsSearch:hover, .clientSearch:focus, .standardsSearch:focus {
+	border: 1px solid #f79433;
+	border-radius: 5px;
+	box-shadow: 0px 0px 10px #fecf8d;
+}
+#standardsSearch, #clientSearch {
+	outline: none;
+	border: none;
+	width: 300px;
+	height: 35px;
+	padding-left: 10px;
+	color: #1a1a1a;
+	font-family: Ubuntu;
+	font-size: 0.875em;
+	transition: 0.25s;
+}
+input::placeholder {
+	outline: none;
+	color: #cccccc;
+	font-style: italic;
+
+}
+.standardsSearch button, .clientSearch button {
+	background: none;
+	outline: none;
+	border: none;
+	margin: 0px 5px 0px 0px;
+	padding: 4px 6px 4px 6px;
+	color: #333333;
+	font-family: Ubuntu;
+	font-size: 1em;
+	text-align: center;
+	transition: 0.25s;
+	cursor: pointer;
+}
+.standardsSearch button:hover, .clientSearch button:hover {
+	background: none;
+	border: none;
+	text-shadow: 0px 0px 10px #fecf8d;
+	color: #f79433;
+}
+.search-container .fa {margin-right: 0px;}

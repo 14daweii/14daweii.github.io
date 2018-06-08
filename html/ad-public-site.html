@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Public Site</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.script-item textarea {width: 600px; margin: 20px 0px 20px 0px;}
+		.copy-btn button {top: 40px;}
+		.tier1 {list-style: normal;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Public Site</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Configuration</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">School Constants</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')">Trackers</button>
+		</div>
+
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Configuration</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">School Constants</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<iframe class="airtable-embed" src="https://airtable.com/embed/shrZO2zkNllYVELOn?backgroundColor=gray&viewControls=on" frameborder="0" onmousewheel=""></iframe>
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Trackers</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Option 1: Google Analytics</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ol class="tier1 paragraph1">
+						<li>If the client chooses to use Google Analytics, they will provides us a code like 'XX-XXXXXXXX-X'.</li>
+						<li>Copy the following script and paste it into the bottom of the welcome editing page in Super Admin > Edit District Public Fields.</li>
+						<li>And then replace the 'XX-XXXXXXXX-X' with the actual code provided by the client.</li>
+						<li>We are unable to preview the tracker from our end.</li>
+					</ol><!-- <ol class="tier1 paragraph1"> -->
+					<ol class="tier1 paragraph1">
+						<div class="script-item copy-btn">
+						<textarea id="script101" rows="12">
+<script>
+	(function(i,s,o,g,r,a,m) {
+		i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+			(i[r].q=i[r].q||[]).push(arguments)}, 
+		i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0]; 
+		a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})
+	(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'XX-XXXXXXXX-X', 'auto');
+	ga('send', 'pageview');
+</script>
+						</textarea>
+						<button class="copy-button" id="copy101"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script101 = document.getElementById("script101"); 
+							var button = document.getElementById("copy101"); button.addEventListener("click", function (event) {event.preventDefault(); script101.select(); document.execCommand("copy");});
+						</script>
+						</div><!-- <div class="script-item copy-btn"> -->
+					</ol><!-- <ol class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Option 2: A Sketchy Website</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ol class="tier1 paragraph1">
+						<li>Go to <a href="http://hit-counter-html-code.com/basic-website-counter.html" target="_blank">http://hit-counter-html-code.com/basic-website-counter.html</a>.</li>
+						<li>Pick the appearance of the tracker and fill out the information.</li>
+						<li>Generate the code, and copy-paste it into the bottom of the welcome editing page in Super Admin > Edit District Public Fields.</li>
+						<li>Preview on the public site.
+							<ul class="tier2 paragraph1">
+								<li>The client doesn't need to provide anything.</li>
+								<li>The counter is up to 9 digits.</li>
+								<li>The count starts as you add it in, and you cannot pause it.</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->		
+						</li>
+					</ol><!-- <ol class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

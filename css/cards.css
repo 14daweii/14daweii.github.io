@@ -1,0 +1,47 @@
+/* General */
+body {margin: 0px; padding: 50px;}
+
+
+/* Page Color: Orange */
+.header1 {color:#f79433;} 
+.header2 {color:#f79433;}
+
+
+/* Tab Buttons */
+div.tabs button:hover {
+	background: #f79433; 
+	box-shadow: 0px 0px 10px #fecf8d;
+}
+div.tabs button.active {background: #f79433;}
+
+
+/* Tab Space */
+.tier1 li a:hover, .tier2 li a:hover {
+	color: #f79433; 
+	border-bottom: 1px dashed #f79433;
+}
+
+
+/* Copy Buttons */
+.copy-btn button {
+	background: #ffefcf;
+	border: 2px solid #fecf8d;
+	color: #f79433;
+}
+.copy-btn button:hover {
+	background: #f79433;
+	box-shadow: 0px 0px 20px #fecf8d;
+	color: #ffffff;
+}
+
+
+/* Hyperlink Buttons --------------------------------------------------------------------------------*/
+
+
+a:hover.hyperlink {
+	background: #f79433;
+	border: 1px solid #f79433;
+	border-radius: 5px;
+	box-shadow: 0px 0px 20px #fecf8d;
+	color: #ffffff;
+}

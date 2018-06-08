@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Onboarding Courses</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/onboarding.css">
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+	<div class="title header1">Onboarding Courses for Site Configuration</div>
+	<div class="section">
+
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">101</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">FCA</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')">Templates</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB4')">Widgets</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB5')">Scripts</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB6')">FFL</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB7')">IB</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB8')">Site-to-Site</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB9')">SET</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB10')">Site Build</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Site Configuration 101</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Faculty and Course Assignments (FCA)</div>
+			<div class="tabSpace">
+				<iframe class="google-embed" src="https://docs.google.com/document/d/14ftH1s3NKO79KBsxHB_u5Dk7D6Bn9ZYsciuP57XQjms/edit?usp=sharing" frameborder="0" onmousewheel=""></iframe>
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Basic Template Editing</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB4" class="tabContent">
+			<div class="tabName header2">Widgets and Such</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB5" class="tabContent">
+			<div class="tabName header2">Standards Push Scripts</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB6" class="tabContent">
+			<div class="tabName header2">Front Load Filtered Standards</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB7" class="tabContent">
+			<div class="tabName header2">IB Templates</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB8" class="tabContent">
+			<div class="tabName header2">Site to Site Copy</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB9" class="tabContent">
+			<div class="tabName header2">Standards Editing Tool (SET)</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB10" class="tabContent">
+			<div class="tabName header2">Basic Site Build</div>
+			<div class="tabSpace"></div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>About "Reply All"</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/resources.css">
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+	<div class="title header1">About "Reply All"</div>
+	<div class="section">
+
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">About</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">Resources</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Use "Reply All" Wisely</div>
+			<div class="tabSpace">
+				<img src="../images/reply-all.png" width="1400px">
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Resources</div>
+			<div class="tabSpace">
+					<ul class="tier1 paragraph1">
+						<li><a href="https://www.linkedin.com/pulse/use-reply-all-wisely-martin-koster" target="_blank">Primary Resource</a></li>
+						<li><span>Some Other Resources</span>
+							<ul class="tier2">
+								<li><a href="http://www.thecouchmanager.com/5-annoying-replies-that-don%E2%80%99t-require-%E2%80%9Creply-all%E2%80%9D/" target="_blank">5 Annoying Replies That Don’t Require “Reply All”</a></li>
+								<li><a href="https://www.linkedin.com/pulse/think-twice-before-you-reply-all-karen-rehn" target="_blank">Think Twice Before You "Reply All"</a></li>
+								<li><a href="http://gawker.com/5565228/rules-for-using-the-reply-all-button" target="_blank">Rules for Using the "Reply All" Button</a></li>
+							</ul><!-- <ul class="tier2"> -->
+						</li>
+						<li><a href="https://images.follownews.com/3174/3174096/these-replyall-email-nightmares-will-make-you-think-twice-before-you-press-send_1.jpg" target="_blank">The End</a></li>
+					</ul><!-- <ul class="tier1v"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

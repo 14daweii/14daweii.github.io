@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Molengo|Ubuntu|Cabin Sketch');
+
+
+/* General */
+body {color: #1a1a1a; font-family: Ubuntu; font-size: 1em;}
+
+
+/* Headers and Paragraphs */
+.header1 {color:#333333; font-family: Ubuntu; font-size: 1.5em;}
+.header2 {color:#333333; font-family: Ubuntu; font-size: 1.25em;}
+.header3 {color:#666666; font-family: Ubuntu; font-size: 1em;}
+.header4 {color:#808080; font-family: Ubuntu; font-weight: lighter; font-size: 0.75em;}
+.paragraph1, .paragraph1 a {color:#1a1a1a; font-family: Molengo; font-size: 1em;}
+.paragraph2, .paragraph2 a {color:#4d4d4d; font-family: Molengo; font-size: 0.875em;}
+
+
+/* Font Awesome Icons */
+.fa {width: 20px; margin-right: 10px; text-align: center;}

@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Look and Feel</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.tabSpace {display: inline-block; vertical-align: top; margin: 0px 0px 0px 25px;}
+		.tabSubheader {margin-top: 0px;}
+		.tabSubsection {width: 300px; height: 400px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Look and Feel</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Logo</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Atlas Logo</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Requirements for Logo Files from Clients</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>Format: PNG, JPG, PSD, EPS, AI, etc.</li>
+						<li>Minimum Size: 100px by 100px</li>
+						<li>Resolution: 72dpi or higher</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Atlas Logo Format and Name Conventions</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>Format: PNG</li>
+						<li>Resolution: 72dpi</li>
+						<li>Naming Convention:
+							<ul class="tier2 paragraph1">
+								<li>school_logo</li>
+								<li>school_logo_small</li>
+								<li>school_logo_notification</li>
+							</ul>
+						</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Atlas Logo Sizes</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>Size for school_logo:
+							<ul class="tier2 paragraph1">
+								<li>Max-Width: 250 px</li>
+								<li>Max-Height: 170 px</li>
+							</ul>
+						</li>
+						<li>Size for school_logo_small:
+							<ul class="tier2 paragraph1">
+								<li>Max-Width: 100 px</li>
+								<li>Max-Height: 70 px</li>
+							</ul>
+						</li>
+						<li>Size for school_logo_notification:
+							<ul class="tier2 paragraph1">
+								<li>Max-Width: 36 px</li>
+								<li>Max-Height: 36 px</li>
+							</ul>
+						</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

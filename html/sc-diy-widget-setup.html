@@ -1,0 +1,193 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DIY Widget Setup</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.tabSpace {display: inline-flex;}
+		.script-preview {background: #fafafa; border: 2px solid #e6e6e6; border-radius: 5px; margin-right: 10px; padding: 20px; color: #666666;}
+		.script-preview textarea {width: auto; margin: 10px 0px 30px 0px; color: #666666;}
+		.script-preview select {outline: none; margin: 5px;}
+		.script-preview option {padding: 2px; font-family: Ubuntu; font-size: 1em;}
+		.script-preview-title {margin-top: 10px; font-weight: bold; text-align: center;}
+		.script-preview-content {padding: 0px;}
+		.script-note {margin: 10px 0px 10px 0px; text-align: center;}
+		.script-note-icon {margin: 0px 50px 0px 10px;}
+		.tabSubsection {border: none; padding: 0px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">DIY Widget Setup</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Check Boxes</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')" id="defaultOpen">Drop Down List with Check Boxes</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')" id="defaultOpen">Drop Down List</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Widget with Check Boxes Only</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="script-preview">
+					<div class="script-preview-title header3">Edit Mode</div><hr>
+						<form><input type="checkbox">Item 1<br><input type="checkbox">Item 2</form>
+						<textarea>sample notes</textarea>
+					<div class="script-preview-title header3">Display Mode</div><hr>
+						<div class="script-preview-content"><ul><li>Item 1</li><li>Item 2</li></ul>sample notes</div>
+				</div><!-- <div class="script-preview"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+						<textarea id="script001" rows="7">
+<curriculumwidget>
+	<table border="0" cellspacing="0" cellpadding="2">
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="checkboxes" display="ul" name="NameOfWidget"/></td></tr>
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="textarea" length="50" display="div" widgetlabel="Notes"/></td></tr>
+	</table>
+</curriculumwidget>
+						</textarea>
+						<button id="copy001"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script001  = document.getElementById("script001"); 
+							var button = document.getElementById("copy001"); button.addEventListener("click", function (event) {event.preventDefault(); script001.select(); document.execCommand("copy");});
+						</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+					<div class="script-note header4">STRUCTURE<i class="fa fa-chevron-up script-note-icon" aria-hidden="true"></i>DATA<i class="fa fa-chevron-down script-note-icon" aria-hidden="true"></i></div>
+					<div class="script-item copy-btn">
+						<textarea id="script002" rows="7">
+<mappingcategoryvaluelists>
+	<mappingcategoryvaluelist name="NameOfWidget">
+		<mappingcategoryvalue mappingcategoryvalueid="9001"><![CDATA[check list 1]]></mappingcategoryvalue>
+		<mappingcategoryvalue mappingcategoryvalueid="9002"><![CDATA[check list 2]]></mappingcategoryvalue>
+	</mappingcategoryvaluelist>
+</mappingcategoryvaluelists>
+						</textarea>
+						<button id="copy002"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script002  = document.getElementById("script002"); 
+							var button = document.getElementById("copy002"); button.addEventListener("click", function (event) {event.preventDefault(); script002.select(); document.execCommand("copy");});
+						</script>						
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Widget with Drop Down List and Check Boxes</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="script-preview">
+					<div class="script-preview-title header3">Edit Mode</div><hr>
+						<select><option>List 1</option><option>List 2</option></select><br>
+						<form><input type="checkbox">Item 1.1<br><input type="checkbox">Item 1.2</form>
+						<textarea>sample notes</textarea>
+					<div class="script-preview-title header3">Display Mode</div><hr>
+						<div class="script-preview-content"><div>List 1</div><ul><li>Item 1.1</li><li>Item 1.2</li></ul><div>List 2</div><ul><li>Item 2.1</li><li>Item 2.2</li></ul>sample notes</div>
+				</div><!-- <div class="script-preview"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+						<textarea id="script003" rows="7">
+<curriculumwidget>
+	<table border="0" cellspacing="0" cellpadding = "4">
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="nesteddynamicselectlist" display="nestedul" group="all" name="Joined"/></td></tr>
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="textarea" length="50" display="div" widgetlabel="Notes"/></td></tr>
+	</table>
+</curriculumwidget>
+						</textarea>
+						<button id="copy003"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script003  = document.getElementById("script003"); 
+							var button = document.getElementById("copy003"); button.addEventListener("click", function (event) {event.preventDefault(); script003.select(); document.execCommand("copy");});
+						</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+					<div class="script-note header4">STRUCTURE<i class="fa fa-chevron-up script-note-icon" aria-hidden="true"></i>DATA<i class="fa fa-chevron-down script-note-icon" aria-hidden="true"></i></div>
+					<div class="script-item copy-btn">
+						<textarea id="script004" rows="11">
+<mappingcategoryvaluelists>
+	<mappingcategoryvaluelist group="all" name="List 1">
+		<mappingcategoryvalue mappingcategoryvalueid="7001"><![CDATA[Checkbox 1.1]]></mappingcategoryvalue>
+		<mappingcategoryvalue mappingcategoryvalueid="7002"><![CDATA[Checkbox 1.2]]></mappingcategoryvalue>
+	</mappingcategoryvaluelist>
+	<mappingcategoryvaluelist group="all" name="List 2">
+		<mappingcategoryvalue mappingcategoryvalueid="7003"><![CDATA[Checkbox 2.1]]></mappingcategoryvalue>
+		<mappingcategoryvalue mappingcategoryvalueid="7004"><![CDATA[Checkbox 2.2]]></mappingcategoryvalue>
+	</mappingcategoryvaluelist>
+</mappingcategoryvaluelists>
+						</textarea>
+						<button id="copy004"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script004  = document.getElementById("script004"); 
+							var button = document.getElementById("copy004"); button.addEventListener("click", function (event) {event.preventDefault(); script004.select(); document.execCommand("copy");});
+						</script>						
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Widget with Drop Down List</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="script-preview">
+					<div class="script-preview-title header3">Edit Mode</div><hr>
+						<select><option>Item 1</option><option>Item 2</option></select><br>
+						<textarea>sample notes</textarea>
+					<div class="script-preview-title header3">Display Mode</div><hr>
+						<div class="script-preview-content"><ul><li>Item 1</li><li>Item 2</li></ul>sample notes</div>
+				</div><!-- <div class="script-preview"> -->
+				<div class="tabSubsection">
+					<div class="script-item copy-btn">
+						<textarea id="script005" rows="7">
+<curriculumwidget>
+	<table border="0" cellspacing="0" cellpadding = "4">
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="dynamicselectlist" widgetlabel="Title" display="ul" name="NameOfWidget"/></td></tr>
+		<tr><td valign="top"><curriculumwidgetdatabinding edit="textarea" length="50" display="div" widgetlabel="Notes"/></td></tr>
+	</table>
+</curriculumwidget>
+						</textarea>
+						<button id="copy005"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script005  = document.getElementById("script005"); 
+							var button = document.getElementById("copy005"); button.addEventListener("click", function (event) {event.preventDefault(); script005.select(); document.execCommand("copy");});
+						</script>
+					</div><!-- <div class="script-item copy-btn"> -->
+					<div class="script-note header4">STRUCTURE<i class="fa fa-chevron-up script-note-icon" aria-hidden="true"></i>DATA<i class="fa fa-chevron-down script-note-icon" aria-hidden="true"></i></div>
+					<div class="script-item copy-btn">
+						<textarea id="script006" rows="7">
+<mappingcategoryvaluelists>
+	<mappingcategoryvaluelist name="NameOfWidget">
+		<mappingcategoryvalue mappingcategoryvalueid="8001"><![CDATA[Drop down 1]]></mappingcategoryvalue>
+		<mappingcategoryvalue mappingcategoryvalueid="8002"><![CDATA[Drop down 2]]></mappingcategoryvalue>
+	</mappingcategoryvaluelist>
+</mappingcategoryvaluelists>
+						</textarea>
+						<button id="copy006"><i class="fa fa-clipboard copy-icon" aria-hidden="true"></i></button>
+						<script>
+							var script006  = document.getElementById("script006"); 
+							var button = document.getElementById("copy006"); button.addEventListener("click", function (event) {event.preventDefault(); script006.select(); document.execCommand("copy");});
+						</script>						
+					</div><!-- <div class="script-item copy-btn"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Site Build Cheat Sheet</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<link rel="stylesheet" type="text/css" href="../css/cards.css">
+	<style>
+		.checkbox {width: 14px; height: 14px; margin-bottom: 15px; background: #e6e6e6; border-radius: 50%; position: relative;}
+		.checkbox label {display: block; position: absolute; top: -1px; left: -1px;width: 14px; height: 14px; background: #e6e6e6; border: 3px solid #e6e6e6; box-shadow:inset 1px 1px 3px #999999; border-radius: 50%; transition: all .5s ease;	cursor: pointer; z-index: 1;}
+		.checkbox input[type=checkbox]:checked + label {background: #f79433;}
+		.cb-container {display: inline-flex;}
+		.cb-item {margin-left: 10px;}
+	</style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Site Build Cheat Sheet</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen">Standards</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB2')">Admin</button>
+			<button class="tabLink" onclick="openTAB(event, 'TAB3')">QA Checklist</button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Push Standards</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>When adding State standards in Amalgamation, make sure to add the whole set based on <a href="../html/sb-state-standards-push.html" target="_blank">State Standards Push</a></li>
+						<li>Choose one and only one set of standards to be the "structure", usually state standards, CCSS, or IB...</li>
+						<li>Enter added standards names to the “Notes” box on the Summary page.</li>
+						<li>Check the SET box if SET is turned on, and check the Script box if script is used.
+						<li>Item 2
+							<ul class="tier2 paragraph1">
+								<li>Item 1.1</li>
+								<li>Item 1.2</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Item 3</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB2" class="tabContent">
+			<div class="tabName header2">Push Standards</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>When adding State standards in Amalgamation, make sure to add the whole set based on <a href="../html/sb-state-standards-push.html" target="_blank">State Standards Push</a></li>
+						<li>Choose one and only one set of standards to be the "structure", usually state standards, CCSS, or IB...</li>
+						<li>Enter added standards names to the “Notes” box on the Summary page.</li>
+						<li>Check the SET box if SET is turned on, and check the Script box if script is used.
+						<li>Item 2
+							<ul class="tier2 paragraph1">
+								<li>Item 1.1</li>
+								<li>Item 1.2</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Item 3</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+		<div id="TAB3" class="tabContent">
+			<div class="tabName header2">Site Build QA Checklist</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Standards Push</div>
+				<div class="tabSubsection">
+					<div class="checkbox"><div class="cb-container"><span><input type="checkbox" value="01" id="checkbox01" name=""/><label for="checkbox01"></label></span><span class="cb-item">dfasfas</span></div></div>
+				</div><!-- <div class="tabSubsection"> -->
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

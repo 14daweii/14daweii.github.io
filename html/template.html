@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Page Title</title>
+	<link rel="shortcut icon" type="image/png" href="../images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="../css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="../css/template.css">
+	<style></style>
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
+<body>
+		
+<div class="stage">
+
+	<div class="title header1">Page Title</div>
+	<div class="section">
+		<div class="tabs">
+			<button class="tabLink" onclick="openTAB(event, 'TAB1')" id="defaultOpen"><i class="fa fa-paw" aria-hidden="true"></i></button>
+		</div>
+	
+		<div id="TAB1" class="tabContent">
+			<div class="tabName header2">Tab Name</div><!-- <div class="tabName header2"> -->
+			<div class="tabSpace">
+				<div class="tabSubheader header4">Tab Subheader</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>Item 1</li>
+						<li>Item 2
+							<ul class="tier2 paragraph1">
+								<li>Item 1.1</li>
+								<li>Item 1.2</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Item 3</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+				<div class="tabSubheader header4">Tab Subheader</div><!-- <div class="tabSubheader header4"> -->
+				<div class="tabSubsection">
+					<ul class="tier1 paragraph1">
+						<li>Item 1</li>
+						<li>Item 2
+							<ul class="tier2 paragraph1">
+								<li>Item 1.1</li>
+								<li>Item 1.2</li>
+							</ul><!-- <ul class="tier2 paragraph1"> -->
+						</li>
+						<li>Item 3</li>
+					</ul><!-- <ul class="tier1 paragraph1"> -->
+				</div><!-- <div class="tabSubsection"> -->
+
+			</div><!-- <div class="tabSpace"> -->
+		</div><!-- <div class="tabContent"> -->
+
+	</div><!-- <div class="section"> -->
+</div><!-- <div class="stage"> -->
+
+<script>
+	function openTAB(evt, tabName) {
+	    var i, tabContent, tabLink; 
+	    tabContent = document.getElementsByClassName("tabContent"); for (i = 0; i < tabContent.length; i++) {tabContent[i].style.display = "none";}
+	    tabLink = document.getElementsByClassName("tabLink"); for (i = 0; i < tabLink.length; i++) {tabLink[i].className = tabLink[i].className.replace(" active", "");}
+	    document.getElementById(tabName).style.display = "block"; evt.currentTarget.className += " active";
+	} document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>

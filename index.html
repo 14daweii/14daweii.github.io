@@ -1,184 +1,189 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+
 <html>
-
-<head><link rel='shortcut icon' href='favicon.ico' type='image/x-icon'/ ></head>
-
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Deployment Page</title>
+	<link rel="favicon" type="image/png" href="images/favicon.png">
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">
+	<link rel="stylesheet" type="text/css" href="css/layout.css">
+	<link rel="stylesheet" type="text/css" href="css/buttons.css">
+	<link rel="stylesheet" type="text/css" href="css/resources.css">
+	<link rel="stylesheet" type="text/css" href="css/search.css">
+	<link rel="stylesheet" type="text/css" href="css/home.css">
+	<script src="https://use.fontawesome.com/137807d2fb.js"></script>
+</head>
 <body>
+	
+<div class="header col-12">
+	<div class="header-list">
+		<button onclick="goHome()" class="col-2" id="home" title="">Refresh Page</button>
+			<script type="text/javascript">function goHome() {var url = 'index.html'; window.location.href = url;}</script>
+		<button onclick="goPassword()" onmouseout="outPassword()" class="col-2 tooltip" id="password" title="Click to Copy Password">
+			<span class="tooltiptext" id="myTooltip"></span>
+			<input type="text" value="N@@d4speed." id="myInput">
+		</button>
+			<script type="text/javascript">
+				function goPassword() {
+					var copyText = document.getElementById("myInput"); copyText.select(); document.execCommand("Copy");
+					var tooltip = document.getElementById("myTooltip"); tooltip.innerHTML = "Password Copied!";
+				}
+				function outPassword() {var tooltip = document.getElementById("myTooltip"); tooltip.innerHTML = "Click to Copy Password.";}
+			</script>
+		<button onclick="goImage()" ondblclick="goChannels()" class="col-2" id="channels" title="">Accounts</button>
+			<script type="text/javascript">
+				channels.onclick = function() {snapshot.style.display = "block";}
+				channels.onmouseout = function() {snapshot.style.display = "none";}
+				function goChannels() {var url = 'https://fs.rubicon.com/intranet/sales/'; window.open(url);}
+			</script>
+		<button onclick="goSalesforce()" class="col-2" id="home" title="">Salesforce</button>
+			<script type="text/javascript">function goSalesforce() {var url = 'https://rubiconinternational.lightning.force.com/one/one.app#/sObject/0011I00000IjrskQAB/view'; window.open(url);}</script>
+		<button onclick="goTasks()" class="col-2" id="tasks" title="">JIRA Tasks</button>
+			<script type="text/javascript">function goTasks() {var url = 'https://jira.rubicon.com/secure/Dashboard.jspa'; window.open(url);}</script>
+		<button onclick="goCalendar()" class="col-2" id="calendar" title="">Outlook Calendar</button>
+			<script type="text/javascript">function goCalendar() {var url = 'https://outlook.office.com/owa/?realm=rubicon.com&exsvurl=1&ll-cc=1033&modurl=0&path=/calendar/view/Month'; window.open(url);}</script>
+	</div>
+</div>
 
-<br>
-<br>
+<div class="section col-12">
+	
+	<div class="main col-10">
+		
+		<div class="search col-10">
+			<div class="search-container">
+				<div class="searchShortcuts">
+					<button onclick="fsHome()" class="shortcut"><i class="fa fa-home fa-lg" aria-hidden="true" title="Flight School Home Page"></i></button>
+						<script type="text/javascript">function fsHome() {var url = 'https://fs.rubicon.com/i/adminsite/default.php'; window.open(url);}</script>	
+					<button onclick="fsSearch()" class="shortcut-text" title="Update Your Location Codes">Location Codes</button>
+						<script type="text/javascript">function fsSearch() {var url = 'https://fs.rubicon.com/i/accounting/locationcode_entry.php'; window.open(url);}</script>
+					<button onclick="altasSearch()" class="shortcut"><i class="fa fa-search fa-lg" aria-hidden="true" title="Atlas Search"></i></button>
+						<script type="text/javascript">function altasSearch() {var url = 'https://fs.rubicon.com/i/adminsite/client_search.php'; window.open(url);}</script>			
+				</div><!-- <div class="searchShortcuts"> -->
+				<div class="clientSearch"><input type="search" id="clientSearch" placeholder="Search for Client by url or name">
+					<button onclick="clientSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+						<script type="text/javascript">function clientSearch() {var term = document.getElementById("clientSearch").value; var url = 'https://fs.rubicon.com/i/adminsite/global_search.php?GlobalSearch='; window.open(url + term);}</script>
+				</div><!-- <div class="clientSearch"> -->
+				<div class="standardsSearch"><input type="search" id="standardsSearch" placeholder="Search for Standards by name">
+					<button onclick="standardsSearch()"><i class="fa fa-search" aria-hidden="true"></i></button>
+						<script type="text/javascript">function standardsSearch() {var term = document.getElementById("standardsSearch").value; var url = 'https://fs.rubicon.com/Internal/Standards/SetEditor/View/Default?DistrictNameQuery='; window.open(url + term);}</script>
+			
+				</div><!-- <div class="standardsSearch"> -->
+			</div><!-- <div class="search-container"> -->
+		</div><!-- <div class="search col-10" -->
+	
+		<div id="snapshot"><img src="images/channels.png" width="800px"></div>
 
-<center>
+		<!-- HOME PAGE START -->
+		<div class="home col-10">
+			<div class="cards-container">
 
-<table>
-<tr>
-<td><center><img src="M:\Letters\David Li\000 The Other Intranet\images\header.png"; width="800px"></center></td>
-</tr>
-</table>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Standards<i class="fa fa-cloud card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/Internal/Standards/SetEditor/View/CopyrightList" target="_blank">Standards Copyrights</a></div>
+					<div class="card-item header3"><a href="html/st-standards-push-scripts.html" target="_blank">Standards Push Scripts</a></div>
+					<div class="card-item header3"><a href="html/st-standards-sweeps.html" target="_blank">Standards Sweeps</a></div>
+					<div class="card-item header3"><a href="html/st-regular-expression.html" target="_blank">Regular Expression</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/Internal/Standards/Uploader/View/Default" target="_blank">Go To Latitude</a></div>
+				</div>
+			</div>
 
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Configuration<i class="fa fa-wrench card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="html/sc-basic-template-editing.html" target="_blank">Basic Template Editing</a></div>
+					<div class="card-item header3"><a href="html/sc-diy-widget-setup.html" target="_blank">DIY Widget Setup</a></div>
+					<div class="card-item header3"><a href="html/sc-school-values.html" target="_blank">School Values</a></div>
+					<div class="card-item header3"><a href="html/sc-basic-school-constants.html" target="_blank">Basic School Constants</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/i/adminsite/newsitesitecopy.php" target="_blank">Site to Site Copy</a></div>
+				</div>
+			</div>
 
-<hr width="1000">
-<table width="1000">
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Site Build<i class="fa fa-cog card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="html/sb-color-scheme-preview.html" target="_blank">Color Scheme Preview</a></div>
+					<div class="card-item header3"><a href="html/sb-look-and-feel.html" target="_blank">Look and Feel</a></div>
+					<div class="card-item header3"><a href="html/sb-state-standards-push.html" target="_blank">State Standards Push</a></div>
+					<div class="card-item header3"><a href="html/sb-site-build-cheat-sheet.html" target="_blank">Site build Cheat Sheet</a></div>
+					<div class="card-item header4" style="margin: 30px 0px 5px 10px; color:#808080">Shell Systems:</div>
+					<div class="shell">
+						<button onclick="goUbD()" id="UbD" title="Basic UbD Template">UbD</button><script type="text/javascript">function goUbD() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=3407&'; window.open(url);}</script>
+						<button onclick="goNYC()" id="NYC" title="NYC Reboot">NYC</button><script type="text/javascript">function goNYC() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5482&'; window.open(url);}</script>
+						<button onclick="goOS()" id="OS" title="OS/MAISA Curriculum">OS</button><script type="text/javascript">function goOS() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5616&'; window.open(url);}</script>
+						<button onclick="goENY()" id="ENY" title="Engage NY Modules">ENY</button><script type="text/javascript">function goENY() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5170&'; window.open(url);}</script>
+						<button onclick="goAU()" id="AU" title="Australia Templates">AU</button><script type="text/javascript">function goAU() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4073&'; window.open(url);}</script>
+						<button onclick="goIB()" id="IB" title="Basic IB Templates">IB</button><script type="text/javascript">function goIB() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5123&'; window.open(url);}</script>
+						<button onclick="goJL()" id="JL" title="Joseph's">JL</button><script type="text/javascript">function goJL() {var url = 'https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4753&'; window.open(url);}</script>
+					</div>
+				</div>
+			</div>
 
-<tr>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Bookmarks<i class="fa fa-tags card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/hr/#careers" target="_blank">Rubicon Job Postings</a></div>
+					<div class="card-item header3"><a href="https://workforcenow.adp.com/public/login/wfnlogin.fcc?TYPE=33554433&REALMOID=06-7521e154-afdc-101f-ae21-844af8f80cb3&GUID=&SMAUTHREASON=0&METHOD=GET&SMAGENTNAME=-SM-6FRTWl8QLZbL0pPTpuxvhgWB6tHbcXeDdpUAS2u%2bQtf1KhoIcl8artRxWa1CiElt&TARGET=-SM-https%3a%2f%2fworkforcenow%2eadp%2ecom%2fportal%2ftheme" target="_blank">Login to ADP</a></div>
+					<div class="card-item header3"><a href="https://www.expensify.com/signin?exitTo=%2Finbox&message=expired&email=dli%40rubicon.com" target="_blank">Login to Expensify</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/policies/paid-national-holidays/" target="_blank">Paid National Holidays</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#BuckinghamPalace/Phone List.htm%3FTocPath%3DBuckingham%2520Palace%7C_____5" target="_blank">Employee Phone Numbers</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/" target="_blank">Rubicon Intranet Homepage</a></div>
+				</div>
+			</div>
 
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Look & Feel</b></font></center>
-<p align="center">
-<a href="M:\Letters\David Li\001 The Unofficial Book\Look & feel\Color Scheme Preview.pdf"; target="_blank">Color Scheme Preview</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Look & feel\Logo and Color Scheme.pdf"; target="_blank">Logo and Color Scheme</a><br><br>
-</p>
-</td>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Deployment<i class="fa fa-user-secret card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="https://rubiconwest.sharepoint.com/:w:/r/sites/Services/_layouts/15/Doc.aspx?sourcedoc=%7B3d9e096d-d717-4b70-bbd5-20f897f31896%7D" target="_blank">Team Responsibilities</a></div>
+					<div class="card-item header3"><a href="https://rubiconwest-my.sharepoint.com/personal/bmerkel_rubicon_com/_layouts/15/onedrive.aspx?slrid=73e9529e-007f-5000-5e1b-0ac2e64c3a95&id=%2Fpersonal%2Fbmerkel_rubicon_com%2FDocuments%2FServices%2FServices%20Offerings%20%28for%20Sales%20%26%20Account%20Managers%29&FolderCTID=0x0120009D7DE6E62A93984C8DBC66B56C22523D" target="_blank">Stratification</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/services-support/#1508192738949-d8ec37ec-b7b6" target="_blank">Product Support</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/services-support/#1508427741234-ba3c9ac7-c58f" target="_blank">Implementation</a></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/intranet/services-support/#1508266677164-e7baf176-c4b6" target="_blank">Standards and Services</a></div>
+				</div>
+			</div>
 
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
+			<div class="card">
+				<div class="card-content">
+					<div class="card-title header1">Advanced<i class="fa fa-magic card-icon" aria-hidden="true"></i></div>
+					<div class="card-item header3"><a href="https://fs.rubicon.com/Internal/LocalizationEditor/View/Default" target="_blank">Localization Editor</a></div>
+					<div class="card-item header3"><a href="html/ad-public-site.html" target="_blank">Public Site Build</a></div>
+					<div class="card-item header3"><a href="html/ad-site-build-management.html" target="_blank">Site Build Management</a></div>
+				</div>
+			</div>
 
-<td bgcolor="#FFFFFF"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#ed1a3b"><b></b></font></center>
-<br>
-<center><font size="6"; color="#4169E1">FallClassic!</font></center>
-</td>
+			</div><!-- <div class="cards-container"> -->
+		</div><!-- <div class="home col-10"> -->
+		<!-- HOME PAGE END -->
+		
+	</div><!-- <div class="main col-10"> -->
+	
+	<div class="resources col-2">
+		<div class="res-section">
+			<ul class="res-list"><div class="res-title header4">Admin Tools</div>
+				<li class="res-item header3"><a href="html/res-request-tracking.html" target="_blank"><i class="fa fa-check-square-o" aria-hidden="true"></i>Request Tracking</a></li>
+				<li class="res-item header3"><a href="html/res-atlas-cancellation.html" target="_blank"><i class="fa fa-meh-o" aria-hidden="true"></i>Atlas Cancellation</a></li>
+			</ul>
+			<ul class="res-list"><div class="res-title header4">Resources</div>
+				<li class="res-item header3"><a href="https://hogwarts.rubiconatlas.org" target="_blank"><i class="fa fa-flask" aria-hidden="true"></i>Hogwarts</a></li>
+				<li class="res-item header3"><a href="html/res-state-standards.html" target="_blank"><i class="fa fa-map-marker" aria-hidden="true"></i>State Standards</a></li>
+				<li class="res-item header3"><a href="https://pd-ib.rubiconatlas.org/Atlas/Browse/View/Calendars?BackLink=Atlas_Browse_View_Calendars&Page=1&TeacherFilter%5B%5D=2&NowViewing=Atlas_Browse_View_Calendars&OrderBy=School&OrderDirection=Ascending" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i>IB Templates</a></li>
+				<li class="res-item header3"><a href="https://ubdresources.rubiconatlas.org/Atlas/Develop/UnitMap/View/Default?BackLink=177&EditMode=1&SourceSiteID=&UnitID=133&YearID=2017&CurriculumMapID=14" target="_blank"><i class="fa fa-tablet" aria-hidden="true"></i>UbD Examples</a></li>
+				<li class="res-item header3"><a href="https://ubdresources.rubiconatlas.org/Atlas/Develop/UnitMap/View/Default?BackLink=156&EditMode=1&UnitID=132&YearID=2017&CurriculumMapID=13&AllowLegacyLogin=0" target="_blank"><i class="fa fa-ticket" aria-hidden="true"></i>Widget Examples</a></li>
+			</ul>
+			<ul class="res-list"><div class="res-title header4">Other Tips</div>
+				<li class="res-item header3"><a href="html/res-strengths-finder.html" target="_blank"><i class="fa fa-star" aria-hidden="true"></i>Strengths Finder</a></li>
+				<li class="res-item header3"><a href="html/res-reply-all.html" target="_blank"><i class="fa fa-reply-all" aria-hidden="true"></i>About "Reply All"</a></li>
+			</ul>
+		</div>
+	</div>
 
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
+</div><!-- <div class="section col-12"> -->
 
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Standards</b></font></center>
-<p align="center">
-<a href="https://fs.rubicon.com/Internal/Standards/SetEditor/View/Default?View=Site&"; target="_blank">Standards Search</a> | 
-<a href="https://hogwarts.rubiconatlas.org/Atlas/References/Standards/View/Default?tab=17&TabName=Standards&FromReferences=1&ShowKey=1&AllStatuses=1&DistrictID=100&StandardsName=Oregon&"; target="_blank">Standards Preview</a><br><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Standards\Standards Push for Each State.pdf"; target="_blank">Standards Push for Each State</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Standards\Standards Scripts.pdf"; target="_blank">Standards Push Scripts</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Standards\Regular Expressions Cheat Sheet.pdf"; target="_blank">Regular Expressions Cheat Sheet</a><br><br><br>
-</p>
-</td>
-
-</tr>
-
-
-<tr style="height:5"></tr>
-
-
-<tr>
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Public Site</b></font></center>
-<p align="center">
-<a href="M:\Letters\David Li\001 The Unofficial Book\Public Site\Public Site Configuration.pdf"; target="_blank">Public Site Configuration</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Public Site\School Constants Descriptions.pdf"; target="_blank">School Constants Descriptions</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Public Site\Splash Page Design Examples.pdf"; target="_blank">Splash Page Design Examples</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Public Site\Public Site Trackers.pdf"; target="_blank">Public Site Trackers</a><br><br>
-</p>
-</td>
-
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>The Official One</b></font></center>
-<p align="center">
-<a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#BuckinghamPalace/Facebook.htm"; target="_blank">Facebook</a><br>
-<a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#Paddington/My Vacation Balance.htm"; target="_blank">Vacation Balance</a><br>
-<a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#British Council/Associate Feedback.htm%3FTocPath%3DBritish%2520Council%7C_____1"; target="_blank">Associate Feedback<a><br>
-<a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#BuckinghamPalace/Channel Map.htm%3FTocPath%3DBuckingham%2520Palace%7C_____1"; target="_blank">Channel Map<a><br>
-<a href="https://fs.rubicon.com/Rubicon%20Underground/Default.htm#BuckinghamPalace/Phone List.htm%3FTocPath%3DBuckingham%2520Palace%7C_____5"; target="_blank">Phone Number List<a><br>
-<a href="https://docs.google.com/forms/d/1lL2CtDBzj65PRTJPGtfPxV8TFwI3I9RnXafBMjnziLQ/viewform?fbzx=-246530623323010718"; target="_blank">Flex Request Form<a><br><br><br>
-</p>
-</td>
-
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Resource Sites</b></font></center>  
-<p align="center">
-<a href="https://ubdresources.rubiconatlas.org"; target="_blank">UbD Resources</a> | <a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5123&"; target="_blank">IB Resources</a><br><br>
-<a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=3407&"; target="_blank">UbD Basic</a> | <a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4073&"; target="_blank">AURoos</a><br>
-<a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5482&"; target="_blank">NYC Reboot</a> | <a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5616&"; target="_blank">OSMAISA</a><br>
-<a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=5170&"; target="_blank">Engage NY</a> | <a href="https://fs.rubicon.com/i/adminsite/client_entry.php?ClientID=4753&"; target="_blank">JL Reboot</a><br>
-<br><br>
-
-</p>
-</td>
-
-
-<tr style="height:5"></tr>
-
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Site Configuration</b></font></center>
-<p align="center">
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\Modified UbD 2.0.pdf"; target="_blank">Modified UbD 2.0</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\Widget Scripts.pdf"; target="_blank">Widget Scripts</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\Basic School Constants.pdf"; target="_blank">Basic School Constants</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\School Values.pdf"; target="_blank">School Values</a><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\Adopted Curriculum.pdf"; target="_blank">Adopted Curriculum</a><br><br>
-<a href="M:\Letters\David Li\001 The Unofficial Book\Site Configuration\Advanced Site Configuration.pdf"; target="_blank">Advanced Site Configuration Notes</a><br><br>
-</p>
-</td>
-
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Conference Rooms</b></font></center>
-<p><center>
-<table width="280"; border="0.5">
-<tr><td align="right"; style="width:55%">Abbey Road Studios</td><td Style="width:5%"></td><td style="width:40%">Podcast</td></tr>
-<tr><td align="right">British Museum</td><td Style="width:5%"></td><td>Arapahoe Basin</td></tr>
-<tr><td align="right">Buckingham Palace</td><td Style="width:5%"></td><td>Main</td></tr>
-<tr><td align="right">Churchill War Room</td><td Style="width:5%"></td><td>Fishbowl East</td></tr>
-<tr><td align="right">Global Theatre</td><td Style="width:5%"></td><td>AEC</td></tr>
-<tr><td align="right">Global Ticket Office</td><td Style="width:5%"></td><td>Harbor</td></tr>
-<tr><td align="right">Henley-on-Thames</td><td Style="width:5%"></td><td>Kootenai</td></tr>
-<tr><td align="right">Leicester Square</td><td Style="width:5%"></td><td>Supply Room</td></tr>
-<tr><td align="right">Piccadilly Circus</td><td Style="width:5%"></td><td>Serengeti</td></tr>
-<tr><td align="right">Stratford</td><td Style="width:5%"></td><td>Library</td></tr>
-<tr><td align="right">Swiss Cottage</td><td Style="width:5%"></td><td>Tatami</td></tr>
-</table>
-</center></p>
-</td>
-
-<td bgcolor="#FFFFFF"; Style="width:0.5%"></td>
-
-<td bgcolor="#f8f8f8"; style="width:33%"; valign="top">
-<br>
-<center><font size="4"; color="#414042"><b>Basic Site Build Note Format</b></font></center>
-<ul><ul><ul>
-<br>
-<p>
-TECA:<br>
-Standards:<br>
-School Values:<br>
-Assessment Methods:<br>
-Assessment Type:<br>
-Map Type:<br>
-Key Contact:<br>
-</p>
-</ul></ul></ul></ul>
-</td>
-
-</tr>
-
-
-</table>
-<hr width="1000">
-
-<br>
-<div align="center">&copy; David W. Li 2016. All rights reserved.</div>
-<br>
-
-
-</center>
-
-
+<div class="footer col-12">
+	<div class="version header4">The Deployment Page 1.2.5</div>
+</div>
 
 </body>
-
-
-
-
 </html>
+
+
